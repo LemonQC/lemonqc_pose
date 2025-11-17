@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta name="description"
         content="Geometry-Guided Self-Supervised Learning for Category-Level Object Pose Estimation in Robotic Grasping.">
@@ -21,6 +22,9 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
+  
+ 
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -39,26 +43,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
-  <script>
-    // 强制初始化配置，避免GitHub Pages缓存导致的配置失效
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$']] // 仅识别$...$格式
-      },
-      startup: {
-        // 页面加载完成后，无论何时都强制扫描并渲染公式
-        onload: function() {
-          MathJax.typeset();
-        }
-      }
-    };
-  </script>
 </head>
 
 
-  
+<script src="./static/js/MathJax/es5/tex-chtml.js" id="MathJax-script" async></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']] // 识别$...$和\(...\)格式的行内公式
+    },
+    chtml: {
+      scale: 1.0 // 公式缩放比例（可选）
+    }
+  };
+</script>
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">

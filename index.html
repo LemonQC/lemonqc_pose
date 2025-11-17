@@ -21,15 +21,7 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
-<!-- 引入MathJax并配置 -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    MathJax.config = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -48,6 +40,24 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+  <script>
+    // 强制初始化配置，避免GitHub Pages缓存导致的配置失效
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']] // 仅识别$...$格式
+      },
+      startup: {
+        // 页面加载完成后，无论何时都强制扫描并渲染公式
+        onload: function() {
+          MathJax.typeset();
+        }
+      }
+    };
+  </script>
+  
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">

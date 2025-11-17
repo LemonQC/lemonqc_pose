@@ -39,8 +39,6 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-</head>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
   <script>
@@ -57,6 +55,19 @@
       }
     };
   </script>
+</head>
+<!-- 在公式所在段落结束后，手动触发一次渲染（双重保障） -->
+<script>
+  // 等待DOM完全加载后再次触发渲染
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }, 1000); // 延迟1秒，确保所有内容加载完毕
+  });
+</script>
+
   
 <body>
 
